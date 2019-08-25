@@ -8,7 +8,35 @@
     <link rel="stylesheet" href="/css/materialize.min.css" />
   </head>
   <body>
+    <nav class="nav-wraper purple accent-5">
+      <div class="container">
+        <a href="#" class="brand-logo">MiniAPP</a>
+        <ul class="hide-on-med-and-down right">
+          <% for (let nav of navs) {%>
+          <li><a href="<%=nav.link%>"> <%=nav.title%></a></li>
+          <%}%>
+        </ul>
+        <a
+          href="#"
+          class="sidenav-trigger hide-on-large-only right"
+          data-target="mob-links"
+          >&times;</a
+        >
+      </div>
+      <div class="sidenav" id="mob-links">
+        <ul>
+          <% for (let nav of navs) {%>
+          <li><a href="<%=nav.link%>"> <%=nav.title%></a></li>
+          <%}%>
+        </ul>
+      </div>
+    </nav>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $('.sidenav').sidenav();
+      });
+    </script>
   </body>
 </html>

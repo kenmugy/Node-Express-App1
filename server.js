@@ -24,8 +24,28 @@ app.use(
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
+const navs = [
+  {
+    link: '/animals',
+    title: 'Animals'
+  },
+  {
+    link: '/girls',
+    title: 'Girls'
+  },
+  {
+    link: '/home',
+    title: 'Home'
+  },
+  {
+    link: '/others',
+    title: 'Others'
+  }
+];
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', {
+    navs
+  });
 });
 
 app.listen(port, () => debug(`listening on port ${chalk.green(port)}`));
