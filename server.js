@@ -21,9 +21,11 @@ app.use(
   '/js',
   express.static(path.join(__dirname, '/node_modules/materialize-css/dist/js'))
 );
+app.set('views', './src/views');
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.send('hello world');
+  res.render('index');
 });
 
 app.listen(port, () => debug(`listening on port ${chalk.green(port)}`));
