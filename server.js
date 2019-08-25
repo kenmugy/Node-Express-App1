@@ -42,6 +42,15 @@ const navs = [
     title: 'Others'
   }
 ];
+const animalRouter = require('./src/routes/animalRoutes')(navs);
+const artRouter = require('./src/routes/artRoutes')(navs);
+const girlRouter = require('./src/routes/girlRoutes')(navs);
+const otherRouter = require('./src/routes/otherRoutes')(navs);
+
+app.use('/animals', animalRouter);
+app.use('/arts', artRouter);
+app.use('/girls', girlRouter);
+app.use('/others', otherRouter);
 app.get('/', (req, res) => {
   res.render('index', {
     navs
