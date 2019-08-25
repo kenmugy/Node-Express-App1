@@ -6,7 +6,7 @@
   "scripts": {
     "start": "set DEBUG=app & nodemon app",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "node_modules/eslint/bin/eslint server.js"
+    "lint": "eslint server.js"
   },
   "author": "ken-mugy",
   "license": "MIT",
