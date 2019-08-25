@@ -1,0 +1,30 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "set DEBUG=app & nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node_modules/eslint/bin/eslint server.js"
+  },
+  "author": "ken-mugy",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.3.1",
+    "chalk": "2.4.2",
+    "config": "3.2.2",
+    "debug": "4.1.1",
+    "ejs": "2.6.2",
+    "express": "4.17.1",
+    "jquery": "3.4.1",
+    "materialize-css": "1.0.0-rc.2",
+    "mocha": "6.2.0",
+    "mongoose": "5.6.10",
+    "morgan": "1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "6.2.1",
+    "nodemon": "1.19.1"
+  }
+}
