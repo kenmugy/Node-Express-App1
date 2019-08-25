@@ -31,6 +31,26 @@
         </ul>
       </div>
     </nav>
+    <main class="container">
+      <h3>Girl <%=girl.id%></h3>
+      <div class="row">
+        <div class="col s12 m8 l6">
+          <div class="card">
+            <div class="card-image">
+              <img src="<%=girl.image%>" />
+              <span class="card-title"><%=girl.name%></span>
+            </div>
+            <div class="card-content">
+              <%=girl.description%>
+            </div>
+            <div class="card-action black">
+              <a href=""><%=girl.name%></a>
+              <a href="" class="right"><%=girl.id%></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/materialize.min.js"></script>
     <script>

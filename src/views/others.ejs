@@ -31,6 +31,21 @@
         </ul>
       </div>
     </nav>
+    <main class="container">
+      <h3>Others</h3>
+      <ul class="collection">
+        <% for (let other of others) {%>
+        <li class="collection-item avatar">
+          <img src="<%=other.image%>" class="circle" />
+          <p class="title">
+            <a href="others/<%=other.id%>"><%=other.name%></a>
+          </p>
+          <p><%=other.description%></p>
+          <p class="secondary-content"><%=other.id%></p>
+        </li>
+        <%}%>
+      </ul>
+    </main>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/materialize.min.js"></script>
     <script>
