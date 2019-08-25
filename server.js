@@ -26,16 +26,16 @@ app.set('view engine', 'ejs');
 
 const navs = [
   {
+    link: '/arts',
+    title: 'Arts'
+  },
+  {
     link: '/animals',
     title: 'Animals'
   },
   {
     link: '/girls',
     title: 'Girls'
-  },
-  {
-    link: '/home',
-    title: 'Home'
   },
   {
     link: '/others',
